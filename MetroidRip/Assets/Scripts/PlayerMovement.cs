@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-	//test
 	[SerializeField] private LayerMask platformLayerMask;
 	private Vector3 m_Velocity = Vector3.zero;
     private float m_MovementSmoothing = .02f;
@@ -16,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody2D _rigidbody;
 	private BoxCollider2D player_collider;
 	private bool grounded = true;
+	[HideInInspector] public bool flipped = false;
+	private GameObject floatingPlatform;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 			numOfJumps++;
 		}
 
-        horizontalMovement = Input.GetAxisRaw("Horizontal1") * speed;
+        horizontalMovement = Input.GetAxisRaw("Horizontal") * speed;
 		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) ) {
 			jump = true;
 		}
@@ -55,15 +56,29 @@ public class PlayerMovement : MonoBehaviour
 		jump = false;
 	}
 
-	private bool isGrounded() {
-		float extraHeight = .1f;
-		RaycastHit2D raycastHit = Physics2D.BoxCast(player_collider.bounds.center, player_collider.bounds.size, 0f, Vector2.down, extraHeight, platformLayerMask);
+	private bool isGrounded()
+    {
+        float extraHeight = .1f;
+        RaycastHit2D raycastHit = Physics2D.BoxCast(player_collider.bounds.center, player_collider.bounds.size, 0f, Vector2.down, extraHeight, platformLayerMask);
+		if (raycastHit.collider != null && Input.GetKeyDown(KeyCode.S)) {
+			if (raycastHit.collider.GetComponent<PlatformEffector2D>() != null) {
+				raycastHit.collider.GetComponent<PlatformEffector2D>().rotationalOffset = 180;
+				floatingPlatform = raycastHit.collider.gameObject;
+			}
+		}
+
+		if (raycastHit.collider == null) {
+			if (floatingPlatform != null && floatingPlatform.GetComponent<PlatformEffector2D>() != null)
+				floatingPlatform.GetComponent<PlatformEffector2D>().rotationalOffset = 0;
+		}
+		
 		return raycastHit.collider != null;
-	}
+    }
 
 	private void Flip() {
 		if (horizontalMovement > 0 && transform.localScale.x < 0 || horizontalMovement < 0 && transform.localScale.x > 0) {
 			transform.localScale *= new Vector2(-1,1);
+			flipped = !flipped;
 		}
 	}
 }
