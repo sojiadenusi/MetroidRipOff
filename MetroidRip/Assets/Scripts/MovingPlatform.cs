@@ -6,17 +6,13 @@ public class MovingPlatform : MonoBehaviour
 {
     public GameObject player;
     
-
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnCollisionEnter2D(Collision2D other) {
+         player.transform.parent = transform;
         
-        player.transform.parent = transform;
-        //player.transform.localScale = new Vector3(1,1,1);
-
     }
 
-    private void OnTriggerExit2D(Collider2D other) {
-        
-        player.transform.parent = null;
+    private void OnCollisionExit2D(Collision2D other) {
+         player.transform.parent = null;
     }
 
 }
