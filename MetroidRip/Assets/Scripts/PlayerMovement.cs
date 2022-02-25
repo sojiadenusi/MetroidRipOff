@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+	public Animator animator;
 	[SerializeField] private LayerMask platformLayerMask;
 	private Vector3 m_Velocity = Vector3.zero;
     private float m_MovementSmoothing = .02f;
@@ -34,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
 		}
 
         horizontalMovement = Input.GetAxisRaw("Horizontal") * speed;
+		animator.SetFloat("speed", Mathf.Abs(horizontalMovement));
+
 		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) ) {
 			jump = true;
 		}
