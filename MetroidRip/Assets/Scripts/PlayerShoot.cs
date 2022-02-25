@@ -17,10 +17,10 @@ public class PlayerShoot : MonoBehaviour
 
     void shoot() {
         if (GetComponent<PlayerMovement>().flipped == false) {
-            Instantiate(projectile, transform.position + new Vector3(1.5f, 0, 0), Quaternion.identity);
+            Instantiate(projectile, transform.position + new Vector3(3.5f, 0, 0), Quaternion.identity);
         }
         else {
-            Instantiate(projectile, transform.position + new Vector3(-1.5f, 0, 0), Quaternion.identity);
+            Instantiate(projectile, transform.position + new Vector3(-3.5f, 0, 0), Quaternion.identity);
         }
         canShoot = false;
         StartCoroutine(coolDown());
