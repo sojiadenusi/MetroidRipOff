@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 64136862441390551}
   - component: {fileID: 64136862441390550}
   - component: {fileID: 64136862441390556}
-  - component: {fileID: 4029179206821081875}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -107,7 +106,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 7
-  jumpForce: 20
+  jumpForce: 14
   flipped: 0
 --- !u!114 &64136862441390552
 MonoBehaviour:
@@ -137,7 +136,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -156,7 +155,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23772955, y: 0.03472352}
+  m_Offset: {x: -0.18071938, y: 0.0033643246}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -167,7 +166,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0852289, y: 2.7982497}
+  m_Size: {x: 1.0689411, y: 2.6535783}
   m_EdgeRadius: 0
 --- !u!95 &64136862441390556
 Animator:
@@ -189,29 +188,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &4029179206821081875
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64136862441390549}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 38e9327eb991e4c42916ebed831ca714, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.16292953, y: 0.28707576}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.6666667, y: 2.6666667}
-    newSize: {x: 1.6, y: 1.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.0025310516, y: 0.367198}
-  m_EdgeRadius: 0

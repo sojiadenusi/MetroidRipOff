@@ -22,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
 		player_collider = GetComponent<BoxCollider2D>();
-		_rigidbody.gravityScale = 3;
-		//animator = gameObject.GetComponent<Animator>();
     }
     void Update()
     {
