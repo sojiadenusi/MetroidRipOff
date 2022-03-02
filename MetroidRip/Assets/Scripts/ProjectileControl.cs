@@ -19,7 +19,7 @@ public class ProjectileControl : MonoBehaviour
         StartCoroutine(despawn());
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnCollisionEnter2D(Collision2D other) {
         StopAllCoroutines();
         Destroy(this.gameObject);
     }
