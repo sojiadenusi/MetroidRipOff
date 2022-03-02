@@ -466,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 64136862441390555, guid: 7198847da4d6e494aa4d599a8bfdf76e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.020058
+      value: -7.89
       objectReference: {fileID: 0}
     - target: {fileID: 64136862441390555, guid: 7198847da4d6e494aa4d599a8bfdf76e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -506,6 +506,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7198847da4d6e494aa4d599a8bfdf76e, type: 3}
+--- !u!1 &629336014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 64136862441390549, guid: 7198847da4d6e494aa4d599a8bfdf76e, type: 3}
+  m_PrefabInstance: {fileID: 629336013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &652452399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2226,7 @@ GameObject:
   - component: {fileID: 1939404321}
   - component: {fileID: 1939404320}
   - component: {fileID: 1939404319}
+  - component: {fileID: 1939404323}
   m_Layer: 6
   m_Name: moving platform
   m_TagString: Untagged
@@ -2342,6 +2348,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1939404323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939404318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3d78699bd9b4dbd9550993a205f36a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 629336014}
 --- !u!1 &2084842133
 GameObject:
   m_ObjectHideFlags: 0
