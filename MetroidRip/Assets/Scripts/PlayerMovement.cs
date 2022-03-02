@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+	private float checkRadius = .2f;
 	public Animator animator;
 	[SerializeField] private LayerMask platformLayerMask;
 	private Vector3 m_Velocity = Vector3.zero;
@@ -16,6 +17,15 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody2D _rigidbody;
 	private BoxCollider2D player_collider;
 	private bool grounded = true;
+	private bool isTouchingFront;
+	public Transform frontCheck;
+	private bool wallSliding;
+	public float wallSlidingSpeed;
+	private bool wallJumping;
+	public float xWallForce;
+	public float yWallForce;
+	public float wallJumpTime;
+	private int wallJumps = 3;
 	[HideInInspector] public bool flipped = false;
 	private GameObject floatingPlatform;
     void Start()
@@ -35,6 +45,32 @@ public class PlayerMovement : MonoBehaviour
 
         horizontalMovement = Input.GetAxisRaw("Horizontal") * speed;
 		animator.SetFloat("speed", Mathf.Abs(horizontalMovement));
+
+		isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, platformLayerMask);
+		if (isTouchingFront == true && grounded == false && horizontalMovement != 0) {
+			wallSliding = true;
+		} else {
+			wallSliding = false;
+		}
+
+		if (wallSliding) {
+			_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, Mathf.Clamp(_rigidbody.velocity.y, -wallSlidingSpeed, float.MaxValue));
+		}
+
+		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && wallSliding == true && wallJumps > 0) {
+			//wallJumping = true;
+			_rigidbody.velocity = new Vector2(xWallForce * -horizontalMovement, yWallForce);
+			--wallJumps;
+			//StartCoroutine(setWallJumpingToFalse());
+		}
+
+		if (wallJumps == 0 && grounded) {
+			StartCoroutine(resetWallJumps());
+		}
+
+		// if (wallJumping == true) {
+		// 	_rigidbody.velocity = new Vector2(xWallForce * -horizontalMovement, yWallForce);
+		// }
 
 		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) ) {
 			jump = true;
@@ -82,5 +118,11 @@ public class PlayerMovement : MonoBehaviour
 			transform.localScale *= new Vector2(-1,1);
 			flipped = !flipped;
 		}
+	}
+
+	IEnumerator resetWallJumps() {
+		yield return new WaitForSeconds(.05f);
+		wallJumps = 2;
+		yield return null;
 	}
 }
