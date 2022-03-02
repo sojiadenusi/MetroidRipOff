@@ -10,11 +10,11 @@ public class ProjectileControl : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().flipped)
         {
-            _rigidbody.velocity = new Vector2(-10, 0);
+            _rigidbody.velocity = new Vector2(-30, 0);
         }
         else
         {
-            _rigidbody.velocity = new Vector2(10, 0);
+            _rigidbody.velocity = new Vector2(30, 0);
         }
         StartCoroutine(despawn());
     }

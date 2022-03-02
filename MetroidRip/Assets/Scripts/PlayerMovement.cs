@@ -19,13 +19,14 @@ public class PlayerMovement : MonoBehaviour
 	private bool grounded = true;
 	private bool isTouchingFront;
 	public Transform frontCheck;
+	public Transform groundCheck;
 	private bool wallSliding;
 	public float wallSlidingSpeed;
 	private bool wallJumping;
 	public float xWallForce;
 	public float yWallForce;
 	public float wallJumpTime;
-	private int wallJumps = 3;
+	private int wallJumps = 2;
 	[HideInInspector] public bool flipped = false;
 	private GameObject floatingPlatform;
     void Start()
@@ -35,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-		grounded = isGrounded();
+		isGrounded();
+		grounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, platformLayerMask);;
 		if (grounded) {
 			numOfJumps = 0;
 		}
@@ -58,19 +60,13 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && wallSliding == true && wallJumps > 0) {
-			//wallJumping = true;
 			_rigidbody.velocity = new Vector2(xWallForce * -horizontalMovement, yWallForce);
 			--wallJumps;
-			//StartCoroutine(setWallJumpingToFalse());
 		}
 
 		if (wallJumps == 0 && grounded) {
 			StartCoroutine(resetWallJumps());
 		}
-
-		// if (wallJumping == true) {
-		// 	_rigidbody.velocity = new Vector2(xWallForce * -horizontalMovement, yWallForce);
-		// }
 
 		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) ) {
 			jump = true;
@@ -94,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
 		jump = false;
 	}
 
-	private bool isGrounded()
+	private void isGrounded()
     {
         float extraHeight = .1f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(player_collider.bounds.center, player_collider.bounds.size, 0f, Vector2.down, extraHeight, platformLayerMask);
@@ -109,8 +105,6 @@ public class PlayerMovement : MonoBehaviour
 			if (floatingPlatform != null && floatingPlatform.GetComponent<PlatformEffector2D>() != null)
 				floatingPlatform.GetComponent<PlatformEffector2D>().rotationalOffset = 0;
 		}
-		
-		return raycastHit.collider != null;
     }
 
 	private void Flip() {
