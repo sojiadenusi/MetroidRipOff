@@ -119,9 +119,9 @@ TextureImporter:
       name: Engineer Sprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 133
-        width: 64
+        x: 14
+        y: 333
+        width: 41
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,9 +140,9 @@ TextureImporter:
       name: Engineer Sprite_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 133
-        width: 64
+        x: 81
+        y: 333
+        width: 31
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -161,9 +161,9 @@ TextureImporter:
       name: Engineer Sprite_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 133
-        width: 64
+        x: 145
+        y: 333
+        width: 38
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -182,9 +182,9 @@ TextureImporter:
       name: Engineer Sprite_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 67
-        width: 64
+        x: 12
+        y: 267
+        width: 45
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -203,9 +203,9 @@ TextureImporter:
       name: Engineer Sprite_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 67
-        width: 64
+        x: 73
+        y: 267
+        width: 51
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -224,9 +224,9 @@ TextureImporter:
       name: Engineer Sprite_5
       rect:
         serializedVersion: 2
-        x: 128
-        y: 67
-        width: 64
+        x: 135
+        y: 267
+        width: 54
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -237,6 +237,216 @@ TextureImporter:
       bones: []
       spriteID: acf24e4511e3c4f48ab221d60d1e76e3
       internalID: -777753405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 200
+        width: 41
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b39c22d191a9b843ae3003cd7bd6a1d
+      internalID: -1039700864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 199
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0baecc397db6e334da83f7b0d734039e
+      internalID: -2112261213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 250
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87fed74519ce924b8ec520fd6aae2f5
+      internalID: 1021071627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 252
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96c848d4aba045438c9699af494a678
+      internalID: 338183015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_10
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 240
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c8eae12637ada489db4f982f971f12
+      internalID: 1433258466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 241
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f55403d9ebe1a246b34d2b0eba658cf
+      internalID: -447607058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_12
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 241
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2a28694b91cf946a400048a1eec97a
+      internalID: -1933398797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_13
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 230
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496fadc9665ffc143a948afb752b6e18
+      internalID: 1719186386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_14
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 230
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c197d0dc29544c04dbf172be7c2347e1
+      internalID: 776338648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Engineer Sprite_15
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 230
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71df9f496012fcc438728f42f2c56f94
+      internalID: 1342599021
       vertices: []
       indices: 
       edges: []
@@ -252,12 +462,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Engineer Sprite_14: 776338648
+      Engineer Sprite_6: -1039700864
       Engineer Sprite_5: -777753405
       Engineer Sprite_2: 452475592
       Engineer Sprite_0: 1413254976
+      Engineer Sprite_13: 1719186386
+      Engineer Sprite_10: 1433258466
       Engineer Sprite_1: 1691297079
       Engineer Sprite_4: -414245861
+      Engineer Sprite_8: 1021071627
+      Engineer Sprite_15: 1342599021
+      Engineer Sprite_11: -447607058
       Engineer Sprite_3: -1032060865
+      Engineer Sprite_7: -2112261213
+      Engineer Sprite_12: -1933398797
+      Engineer Sprite_9: 338183015
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d25950fe7d323e149a5fd2615670103b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: 7
+  patrolSpeed: 5
   _rigidbody: {fileID: 4807401134203422347}
   groundCheck: {fileID: 4807401133817784660}
   wallCheck: {fileID: 4807401133421806942}

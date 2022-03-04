@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     public GameObject projectile;
+    public Transform gun;
     private bool canShoot = true;
 
     void Update()
@@ -17,10 +18,10 @@ public class PlayerShoot : MonoBehaviour
 
     void shoot() {
         if (GetComponent<PlayerMovement>().flipped == false) {
-            Instantiate(projectile, transform.position + new Vector3(3.5f, 0, 0), Quaternion.identity);
+            Instantiate(projectile, gun.position, Quaternion.identity);
         }
         else {
-            Instantiate(projectile, transform.position + new Vector3(-3.5f, 0, 0), Quaternion.identity);
+            Instantiate(projectile, gun.position, Quaternion.identity);
         }
         canShoot = false;
         StartCoroutine(coolDown());

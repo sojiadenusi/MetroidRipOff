@@ -37,8 +37,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 		isGrounded();
-		grounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, platformLayerMask);;
+		grounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, platformLayerMask);
 		if (grounded) {
+			animator.SetBool("Jumping", false);
 			numOfJumps = 0;
 		}
 		if (!grounded && !jump && numOfJumps == 0) {
@@ -78,15 +79,18 @@ public class PlayerMovement : MonoBehaviour
 		_rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
 		if (jump && numOfJumps < 2) {
+			animator.SetBool("Jumping", true);
 			if (numOfJumps == 1) {
 				jumpForce = jumpForce - 3;
 				_rigidbody.velocity = Vector2.up * jumpForce;
 				jumpForce = jumpForce + 3;
+	
 			} else {
 				_rigidbody.velocity = Vector2.up * jumpForce;
 			}
 			numOfJumps++;
 		}
+		
 		jump = false;
 	}
 
