@@ -23,7 +23,7 @@ public class EnemyPatrol : MonoBehaviour
         Patrol();
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Bullet")) {
             Destroy(this.gameObject);
         }
