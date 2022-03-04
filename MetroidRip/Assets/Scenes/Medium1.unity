@@ -314,6 +314,10 @@ PrefabInstance:
       propertyPath: patrolSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 83998221151544578, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+      propertyPath: levelToRestart
+      value: Medium1
+      objectReference: {fileID: 0}
     - target: {fileID: 4807401134203422346, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -381,6 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843b265315e4c4c67a5fad220a903c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: Medium1
 --- !u!1 &330850022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8571441540736219778, guid: c32ca8f2afbf24e1a9d05f11b987062e, type: 3}
@@ -1585,6 +1590,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 83998221151544578, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+      propertyPath: levelToRestart
+      value: Medium1
+      objectReference: {fileID: 0}
     - target: {fileID: 4807401134203422346, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
       propertyPath: m_Name
       value: Enemy
