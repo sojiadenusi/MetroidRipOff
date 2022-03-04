@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneMangement;
+using UnityEngine.SceneManagement;
 
 public class EnemyPatrol : MonoBehaviour
 {
+    public string levelToRestart;
     private Vector3 m_Velocity = Vector3.zero;
     private float m_MovementSmoothing = .02f;
     public float patrolSpeed;
@@ -28,7 +29,8 @@ public class EnemyPatrol : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet")) {
             Destroy(this.gameObject);
         }else if (other.gameObject.CompareTag("Player")){
-            SceneManager.LoadScene(SceneManager.GetActiveScene());
+            //int num = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(levelToRestart);
         }
     }
 
