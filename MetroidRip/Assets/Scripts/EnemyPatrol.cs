@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    public string levelToRestart;
+    //public string levelToRestart;
     private Vector3 m_Velocity = Vector3.zero;
     private float m_MovementSmoothing = .02f;
     public float patrolSpeed;
@@ -28,15 +28,15 @@ public class EnemyPatrol : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Bullet")) {
             Destroy(this.gameObject);
-        }else if (other.gameObject.CompareTag("Player")){
-            //int num = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(levelToRestart);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (!other.collider.CompareTag("Player")) {
             Flip();
+        }else if (other.gameObject.CompareTag("Player")){
+            int num = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(num);
         }
     }
 
