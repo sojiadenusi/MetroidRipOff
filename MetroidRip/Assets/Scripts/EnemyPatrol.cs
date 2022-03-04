@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneMangement;
 
 public class EnemyPatrol : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class EnemyPatrol : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Bullet")) {
             Destroy(this.gameObject);
+        }else if (other.gameObject.CompareTag("Player")){
+            SceneManager.LoadScene(SceneManager.GetActiveScene());
         }
     }
 
