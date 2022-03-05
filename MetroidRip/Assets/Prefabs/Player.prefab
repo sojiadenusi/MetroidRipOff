@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 5967298568997071846}
   - component: {fileID: 5967298568997071852}
   - component: {fileID: 4725576135339606653}
+  - component: {fileID: 8655245358008439908}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -208,7 +209,7 @@ MonoBehaviour:
   groundCheck: {fileID: 5923295966082140747}
   wallSlidingSpeed: 2
   xWallForce: 5
-  yWallForce: 15
+  yWallForce: 16
   wallJumpTime: 0.05
   flipped: 0
 --- !u!114 &5967298568997071848
@@ -304,4 +305,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 874172bfff940c84db184d9981774e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+--- !u!114 &8655245358008439908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5967298568997071845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56576589b8d608d42843cf502f1a01a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoUI: {fileID: 0}

@@ -34,9 +34,8 @@ public class EnemyPatrol : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (!other.collider.CompareTag("Player")) {
             Flip();
-        }else if (other.gameObject.CompareTag("Player")){
-            int num = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(num);
+        } else if (other.gameObject.CompareTag("Player")){
+            GlobalVariables.health -= 1;
         }
     }
 

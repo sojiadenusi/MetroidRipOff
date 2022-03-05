@@ -10,7 +10,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && canShoot)
+        if (Input.GetKeyDown(KeyCode.F) && canShoot && GlobalVariables.ammo > 0)
         {
             shoot();
         }
@@ -23,6 +23,7 @@ public class PlayerShoot : MonoBehaviour
         else {
             Instantiate(projectile, gun.position, Quaternion.identity);
         }
+        GlobalVariables.ammo -= 1;
         canShoot = false;
         StartCoroutine(coolDown());
     }
