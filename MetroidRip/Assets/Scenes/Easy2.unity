@@ -379,7 +379,7 @@ Transform:
   m_Children:
   - {fileID: 38582259}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &230107275
 PrefabInstance:
@@ -858,7 +858,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &464285717
 BoxCollider2D:
@@ -1022,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5066584749127106202, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5066584749127106202, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1298,7 +1298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8380642925883979468, guid: 8135294265fee104495ecb5bace58206, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8380642925883979468, guid: 8135294265fee104495ecb5bace58206, type: 3}
       propertyPath: m_LocalScale.x
@@ -1411,7 +1411,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &944267401 stripped
 Transform:
@@ -1633,7 +1633,7 @@ Transform:
   - {fileID: 1109907057}
   - {fileID: 944267401}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1109907057 stripped
 Transform:
@@ -1804,7 +1804,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2196385084543235020, guid: d98ed27d440e24f489f6151c51bf9301, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2196385084543235020, guid: d98ed27d440e24f489f6151c51bf9301, type: 3}
       propertyPath: m_LocalScale.x
@@ -2061,7 +2061,7 @@ PrefabInstance:
       objectReference: {fileID: 1464762855}
     - target: {fileID: 7098578821183583462, guid: 131b13549a8c18f4ead6cc4e116f32d5, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7098578821183583462, guid: 131b13549a8c18f4ead6cc4e116f32d5, type: 3}
       propertyPath: m_LocalPosition.x
