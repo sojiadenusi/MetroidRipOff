@@ -8,4 +8,8 @@ public class sceneChange : MonoBehaviour
     public void startGame(){
         SceneManager.LoadScene("Easy1");
     }
+
+    public void quitGame(){
+        Application.Quit();
+    }
 }
