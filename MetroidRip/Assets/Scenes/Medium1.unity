@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843b265315e4c4c67a5fad220a903c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: abf3d09800f5849699457d4aed68182f, type: 3}
 --- !u!1001 &304206897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4241,6 +4242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843b265315e4c4c67a5fad220a903c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: abf3d09800f5849699457d4aed68182f, type: 3}
 --- !u!1 &1641560715
 GameObject:
   m_ObjectHideFlags: 0
