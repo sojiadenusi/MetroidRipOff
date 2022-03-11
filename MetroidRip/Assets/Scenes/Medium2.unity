@@ -348,7 +348,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6088843760804158627, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 83998221151544578, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
 --- !u!1 &122802301
 GameObject:
@@ -1149,6 +1154,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 8300000, guid: abf3d09800f5849699457d4aed68182f, type: 3}
+  _audioSource: {fileID: 853409563}
+  animator: {fileID: 853409564}
+--- !u!82 &853409563 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6088843760804158627, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+  m_PrefabInstance: {fileID: 1516266212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &853409564 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 83998221151544579, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+  m_PrefabInstance: {fileID: 1516266212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &922438502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1208,7 +1225,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6088843760804158627, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 83998221151544578, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
 --- !u!1001 &1157158578
 PrefabInstance:
@@ -6487,6 +6509,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 8300000, guid: abf3d09800f5849699457d4aed68182f, type: 3}
+  _audioSource: {fileID: 1163115843}
+  animator: {fileID: 1163115844}
+--- !u!82 &1163115843 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6088843760804158627, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+  m_PrefabInstance: {fileID: 1781212141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1163115844 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 83998221151544579, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+  m_PrefabInstance: {fileID: 1781212141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1236195646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6571,6 +6605,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 8300000, guid: abf3d09800f5849699457d4aed68182f, type: 3}
+  _audioSource: {fileID: 1265724693}
+  animator: {fileID: 1265724694}
+--- !u!82 &1265724693 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6088843760804158627, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+  m_PrefabInstance: {fileID: 114907129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1265724694 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 83998221151544579, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+  m_PrefabInstance: {fileID: 114907129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1310402035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8571441540736219778, guid: c32ca8f2afbf24e1a9d05f11b987062e, type: 3}
@@ -6880,7 +6926,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6088843760804158627, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 83998221151544578, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
 --- !u!4 &1530090295 stripped
 Transform:
@@ -6905,6 +6956,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 8300000, guid: abf3d09800f5849699457d4aed68182f, type: 3}
+  _audioSource: {fileID: 1556180808}
+  animator: {fileID: 1556180809}
+--- !u!82 &1556180808 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6088843760804158627, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+  m_PrefabInstance: {fileID: 922438502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1556180809 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 83998221151544579, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+  m_PrefabInstance: {fileID: 922438502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1733822771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7182,7 +7245,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6088843760804158627, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 83998221151544578, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 51f593df90fda428c86e7849aca826c5, type: 3}
 --- !u!1001 &1838625430
 PrefabInstance:

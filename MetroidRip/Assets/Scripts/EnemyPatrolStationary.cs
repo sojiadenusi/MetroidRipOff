@@ -6,20 +6,22 @@ using UnityEngine.SceneManagement;
 public class EnemyPatrolStationary : MonoBehaviour
 {
     public AudioClip deathSound;
-    AudioSource _audioSource;
-    
-
-    private void Start() {
-        _audioSource = GetComponent<AudioSource>();
-    }
-    //public string level;
-    private void OnCollisionEnter2D(Collision2D other) {
+    public AudioSource _audioSource;
+    public Animator animator;
+    private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Bullet")) {
-            _audioSource.PlayOneShot(deathSound);
-            Destroy(this.gameObject);
-        }else if (other.gameObject.CompareTag("Player")){
+            animator.SetTrigger("die");
+            StartCoroutine(kill());
+        } else if (other.gameObject.CompareTag("Player")) {
             int num = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(num);
         }
+    }
+
+    IEnumerator kill() {
+        _audioSource.PlayOneShot(deathSound);
+        yield return new WaitForSeconds(.5f);
+        Destroy(this.gameObject);
+        yield return null;
     }
 }
