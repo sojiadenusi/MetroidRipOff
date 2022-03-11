@@ -23,7 +23,7 @@ public class Boss : MonoBehaviour
         }
 
         if (GlobalVariables.bossHealth == 0) {
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("You Win");
         }
     }
     private void OnTriggerEnter2D(Collider2D other) {
