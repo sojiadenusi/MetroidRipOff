@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 			_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, Mathf.Clamp(_rigidbody.velocity.y, -wallSlidingSpeed, float.MaxValue));
 		}
 
-		if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) && wallSliding == true && wallJumps > 0) {
+		if ((Input.GetButtonDown("Jump1") || Input.GetKeyDown(KeyCode.Space)) && wallSliding == true && wallJumps > 0) {
 			_rigidbody.velocity = new Vector2(xWallForce * -horizontalMovement, yWallForce);
 			--wallJumps;
 		}
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 			StartCoroutine(resetWallJumps());
 		}
 
-		if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) ) {
+		if ((Input.GetButtonDown("Jump1") || Input.GetKeyDown(KeyCode.Space)) ) {
 			jump = true;
 		}
 		Flip();
