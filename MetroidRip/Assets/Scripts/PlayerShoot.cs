@@ -7,12 +7,20 @@ public class PlayerShoot : MonoBehaviour
     public GameObject projectile;
     public Transform gun;
     private bool canShoot = true;
+    public AudioClip bulletSound;
+    AudioSource _audioSource;
+    
+
+    private void Start() {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && canShoot && GlobalVariables.ammo > 0)
         {
             shoot();
+            _audioSource.PlayOneShot(bulletSound);
         }
     }
 
