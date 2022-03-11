@@ -8,6 +8,8 @@ public class Boss : MonoBehaviour
     private bool canDmg = false;
 
     private GameObject[] tenctacles;
+    public GameObject[] shooters;
+    public GameObject bullet;
     void Start()
     {
         tenctacles = GameObject.FindGameObjectsWithTag("Tentacle");
@@ -24,20 +26,27 @@ public class Boss : MonoBehaviour
             SceneManager.LoadScene("End");
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Bullet")) {
             if (canDmg) {
                 GlobalVariables.bossHealth -= 1;
-                resetTentacles();
+                StartCoroutine(resetTentacles());
             }
         }
     }
 
-    void resetTentacles() {
+    IEnumerator resetTentacles() {
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(bullet, shooters[0].transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(bullet, shooters[2].transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(bullet, shooters[1].transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < tenctacles.Length; i++) {
             tenctacles[i].SetActive(true);
         }
         GlobalVariables.bossTentacles = 3;
+        yield return null;
     }
 }
