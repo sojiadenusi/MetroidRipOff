@@ -12,4 +12,9 @@ public class sceneChange : MonoBehaviour
     public void quitGame(){
         Application.Quit();
     }
+
+    public void restart(){
+        SceneManager.LoadScene("title");
+    }
+
 }
