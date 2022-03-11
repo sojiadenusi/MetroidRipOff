@@ -21,4 +21,8 @@ public class sceneChange : MonoBehaviour
         SceneManager.LoadScene("title");
     }
 
+    public void instructions(){
+        SceneManager.LoadScene("Instructions");
+    }
+
 }

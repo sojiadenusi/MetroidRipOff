@@ -7650,7 +7650,7 @@ Transform:
   m_Children:
   - {fileID: 238792989}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1765046746
 PrefabInstance:
@@ -8000,6 +8000,14 @@ PrefabInstance:
     - target: {fileID: 5066584749127106214, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066584749785449473, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -314
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066584749785449473, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 195
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
