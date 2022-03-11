@@ -8007,7 +8007,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5066584749785449473, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 195
+      value: 216
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066584749785449478, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
+      propertyPath: m_text
+      value: 'Ammo: 0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066584749785449478, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066584749785449478, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066584749785449478, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.8396226
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066584749785449478, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190294
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ed14fa8b3f697c4a8b8abebede66e96, type: 3}
