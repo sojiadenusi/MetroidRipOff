@@ -25,4 +25,8 @@ public class sceneChange : MonoBehaviour
         SceneManager.LoadScene("Instructions");
     }
 
+    public void gameOverRestart(){
+        SceneManager.LoadScene
+    }
+
 }
