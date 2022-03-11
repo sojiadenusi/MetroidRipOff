@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonsterBulletControl : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
-    void Awake()
+    void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         if (-GameObject.FindGameObjectWithTag("EnemyShooter").GetComponent<EnemyShooter>().transform.localScale.x == 1)

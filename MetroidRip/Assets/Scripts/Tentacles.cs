@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Tentacles : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D other) {
-        this.enabled = false;
+    private void OnTriggerEnter2D(Collider2D other) {
+        this.gameObject.SetActive(false);
         GlobalVariables.bossTentacles -= 1;
     }
 }

@@ -21,6 +21,14 @@ public class PlayerHealth : MonoBehaviour
                 StartCoroutine(dmgCD());
             }
         }
+        else if (other.gameObject.CompareTag("BossLaser")) {
+            if (canDmg) {
+                GlobalVariables.health -= 1;
+                canDmg = false;
+                GetComponent<Rigidbody2D>().velocity = new Vector2(-2000, GetComponent<Rigidbody2D>().velocity.y);
+                StartCoroutine(dmgCD());
+            }
+        }
     }
 
     IEnumerator dmgCD() {

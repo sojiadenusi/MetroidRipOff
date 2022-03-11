@@ -20,7 +20,7 @@ public class ProjectileControl : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("EnemyShooter") || other.CompareTag("Enemy")) {
+        if (other.CompareTag("EnemyShooter") || other.CompareTag("Enemy") || other.CompareTag("Tentacle")) {
             Destroy(this.gameObject);
         }
     }

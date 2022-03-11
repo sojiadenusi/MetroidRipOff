@@ -11,6 +11,10 @@ TagManager:
   - MonsterBullet
   - Tentacle
   - Bossinfo
+  - 1
+  - 2
+  - 3
+  - BossLaser
   layers:
   - Default
   - TransparentFX
