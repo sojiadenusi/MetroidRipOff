@@ -15,6 +15,14 @@ public class EnemyPatrol : MonoBehaviour
     private bool noGround;
     private bool hitWall;
     public LayerMask platformLayer;
+    public AudioClip deathSound;
+    AudioSource _audioSource;
+    
+
+    private void Start() {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         noGround = !Physics2D.OverlapCircle(groundCheck.position, 0.1f, platformLayer);
@@ -27,6 +35,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Bullet")) {
+            _audioSource.PlayOneShot(deathSound);
             Destroy(this.gameObject);
         }
     }
