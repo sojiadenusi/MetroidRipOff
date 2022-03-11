@@ -966,8 +966,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: The player must get to the exit door in each level. The player may double
     jump and wall jump as well as doing both. The player can also shoot. On your
-    computer press F to shoot and Space Bar to jump. On PS4/5 controller press Square
-    to jump and X to shoot. On Xbox press B to shoot and press A to jump.
+    computer you have to Left Click to shoot and Space Bar to jump. On PS4/5 controller
+    press Square to jump and X to shoot. On Xbox press B to shoot and press A to
+    jump.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
