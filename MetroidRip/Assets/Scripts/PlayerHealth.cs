@@ -8,8 +8,9 @@ public class PlayerHealth : MonoBehaviour
     private bool canDmg = true;
 
     private void Update() {
-        if (GlobalVariables.health == 0) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (GlobalVariables.health <= 0) {
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("Game Over");
         }
     }
 
