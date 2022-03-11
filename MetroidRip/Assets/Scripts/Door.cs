@@ -7,7 +7,8 @@ public class Door : MonoBehaviour
 {
     public string sceneToLoad;
 private void OnTriggerEnter2D(Collider2D other) {
-    if(other.CompareTag("Player")){
+    if (other.CompareTag("Player")) {
+        GlobalVariables.ammo = 20;
         SceneManager.LoadScene(sceneToLoad);
     }
 }
