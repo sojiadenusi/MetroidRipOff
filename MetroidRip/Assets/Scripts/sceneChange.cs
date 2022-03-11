@@ -17,4 +17,8 @@ public class sceneChange : MonoBehaviour
         SceneManager.LoadScene("title");
     }
 
+    public void backButton(){
+        SceneManager.LoadScene("title");
+    }
+
 }
