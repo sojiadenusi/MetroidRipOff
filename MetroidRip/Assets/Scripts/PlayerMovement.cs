@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
 	private float checkRadius = .2f;
@@ -36,6 +36,9 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+		if (Input.GetButtonDown("Escape")) {
+			SceneManager.LoadScene("title");
+		}
 		isGrounded();
 		grounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, platformLayerMask);
 		if (grounded) {
