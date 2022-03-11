@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &748120635799370081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643238927472866169}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643238927472866169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748120635799370081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1545781679027102513}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545781679027102516
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +43,7 @@ GameObject:
   - component: {fileID: 1545781679027102512}
   - component: {fileID: 1545781679027102515}
   - component: {fileID: 1545781679027102514}
-  - component: {fileID: 1545781679027102517}
+  - component: {fileID: 3598884935671720706}
   m_Layer: 0
   m_Name: Security Drone_1
   m_TagString: Untagged
@@ -33,6 +64,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1545781679559577464}
+  - {fileID: 1643238927472866169}
+  - {fileID: 5945557637298170617}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,7 +168,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4583334, y: 1.7916666}
   m_EdgeRadius: 0
---- !u!114 &1545781679027102517
+--- !u!114 &3598884935671720706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,11 +177,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1545781679027102516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8342b9fbfab02f548bed482118890f9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 841ef7adaebcd774cb0c7d9ec8af35b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolSpeed: 5
   _rigidbody: {fileID: 1545781679027102515}
+  groundCheck: {fileID: 1643238927472866169}
+  wallCheck: {fileID: 5945557637298170617}
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 64
   eyes: {fileID: 1545781679559577467}
+  player: {fileID: 0}
   bullet: {fileID: 7342477136723662238, guid: 16466c9e70accc84a9cadef3779c4908, type: 3}
 --- !u!1 &1545781679559577467
 GameObject:
@@ -180,4 +220,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1545781679027102513}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3289415845995778156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5945557637298170617}
+  m_Layer: 0
+  m_Name: Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5945557637298170617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289415845995778156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1545781679027102513}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
