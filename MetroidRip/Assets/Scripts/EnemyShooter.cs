@@ -25,7 +25,6 @@ public class EnemyShooter : MonoBehaviour
     void Update()
     {
         RaycastHit2D hit = Physics2D.Raycast(eyes.transform.position, -sightDirection * range);
-        //Debug.DrawRay(eyes.transform.position, -sightDirection * range);
         if (hit.collider != null) {
             if (hit.transform.tag == "Player" || hit.transform.tag == "MonsterBullet") {
                 foundPlayer = true;
