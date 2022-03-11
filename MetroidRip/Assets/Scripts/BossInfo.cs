@@ -5,7 +5,6 @@ using TMPro;
 public class BossInfo : MonoBehaviour
 {
     public TextMeshProUGUI ammoUI;
-    // Update is called once per frame
     void Update()
     {
         ammoUI.text = "Boss Health: " + GlobalVariables.bossHealth;

@@ -17,7 +17,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && canShoot && GlobalVariables.ammo > 0)
+        if (Input.GetButtonDown("Fire1") && canShoot && GlobalVariables.ammo > 0)
         {
             shoot();
             _audioSource.PlayOneShot(bulletSound);
