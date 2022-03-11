@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - EnemyShooter
   - MonsterBullet
+  - Tentacle
+  - Bossinfo
   layers:
   - Default
   - TransparentFX
