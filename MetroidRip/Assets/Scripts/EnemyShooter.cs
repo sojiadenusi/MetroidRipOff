@@ -26,11 +26,13 @@ public class EnemyShooter : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(eyes.transform.position, -sightDirection * range);
         if (hit.collider != null) {
-            if (hit.transform.tag == "Player" || hit.transform.tag == "MonsterBullet") {
+            if (hit.transform.tag == "Player") {
                 foundPlayer = true;
             } else {
                 foundPlayer = false;
             }
+        } else {
+            foundPlayer = false;
         }
     }
 
@@ -45,7 +47,7 @@ public class EnemyShooter : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (!other.collider.CompareTag("Player")) {
+        if (!other.collider.CompareTag("Player") && !other.collider.CompareTag("MonsterBullet")) {
             Flip();
         }
     }
